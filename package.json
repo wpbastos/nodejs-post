@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-post",
+  "version": "0.1.0",
+  "description": "Post (Simple Blog) (NodeJS)",
+  "author": "Wellington P Bastos <wpbastos@live.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/wpbastos/nodejs-post",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:wpbastos/nodejs-post.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wpbastos/nodejs-post/issues"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start:server": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
