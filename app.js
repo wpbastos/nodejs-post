@@ -13,9 +13,11 @@ const optionsDB = {
   useUnifiedTopology: true,
   useCreateIndex: true,
   retryWrites: true,
+  user: process.env.MONGO_ATLAS_USR,
+  pass: process.env.MONGO_ATLAS_PSW,
   // authSource: 'admin',
 };
-const urlDB = 'mongodb+srv://postUser:JpNhXHDrLsH9mnNP@blog-rxmwl.azure.mongodb.net/blog';
+const urlDB = 'mongodb+srv://@blog-rxmwl.azure.mongodb.net/blog';
 mongoose
   .connect(urlDB, optionsDB)
   .then(() => {
