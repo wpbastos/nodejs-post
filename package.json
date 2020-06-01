@@ -13,6 +13,9 @@
     "url": "https://github.com/wpbastos/nodejs-post/issues"
   },
   "main": "server.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "start": "node server.js",
     "start:dev": "nodemon server.js",
