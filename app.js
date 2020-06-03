@@ -17,7 +17,7 @@ const optionsDB = {
   pass: process.env.MONGO_ATLAS_PSW,
   // authSource: 'admin',
 };
-const urlDB = 'mongodb+srv://@blog-rxmwl.azure.mongodb.net/blog';
+const urlDB = process.env.MONGO_ATLAS_URL;
 mongoose
   .connect(urlDB, optionsDB)
   .then(() => {
