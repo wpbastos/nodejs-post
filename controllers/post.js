@@ -40,11 +40,10 @@ exports.getPost = (req, res, next) => {
 };
 
 exports.createPost = (req, res, next) => {
-  const url = req.protocol + '://' + req.get('host');
   const post = new Post({
     title: req.body.title,
     content: req.body.content,
-    imagePath: url + '/images/' + req.file.filename,
+    imagePath: req.file.url,
     creator: req.userData.userId,
   });
   post
@@ -66,8 +65,7 @@ exports.createPost = (req, res, next) => {
 exports.updatePost = (req, res, next) => {
   let imagePath = req.body.imagePath;
   if (req.file) {
-    const url = req.protocol + '://' + req.get('host');
-    imagePath = url + '/images/' + req.file.filename;
+    imagePath = req.file.url;
   }
   const post = new Post({
     _id: req.body.id,
